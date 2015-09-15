@@ -57,7 +57,7 @@ var education = {
       "name": "Code Fellows",
       "location": "Seattle",
       "degree": "JavaScript Boot Camp",
-      "majors": ["1st major", "2nd major"],
+      "majors": ["1st major"],
       "dates" : "2/2014 - 4/2014",
       "url" : "https://www.codefellows.org/"
     }
@@ -112,11 +112,11 @@ for (var job in work.jobs) {
 }
 
 // WORK LOCATIONS
-/*
-Write a function called locationizer(work_obj). It must take in the work object.
-locationizer(work_obj) must return an array of the locations in work.
-Use .push() to add values to the array.
-ALREADY IN HELPER.JS - COMMENTING OUT
+  // Write a function called locationizer(work_obj). It must take in the work object.
+  //   locationizer(work_obj) must return an array of the locations in work.
+  //   Use .push() to add values to the array.
+  //   ALREADY IN HELPER.JS - COMMENTING OUT
+
 function locationizer(work_obj) {
   var locationArray = [];
   for (var job in work_obj.jobs) {
@@ -125,60 +125,37 @@ function locationizer(work_obj) {
   }
   return locationArray;
 }
-*/
+
 
 // EDUCATION
-// education.display = function() {
-//   for (school in education.schools) {
-//     $("#education").append(HTMLschoolStart);
-//     var formattedName = HTMLschoolName.replace("%data%" , education.schools[school].name);
-//     var formattedDegree = HTMLschoolDegree.replace("%data%" , education.schools[school].degree);
-//     var formattedNameDegree = formattedName + formattedDegree;
-//     $(".education-entry:last").append(formattedNameDegree);
-//     var formattedDates = HTMLschoolDates.replace("%data%" , education.schools[school].dates);
-//     $(".education-entry:last").append(formattedDates);
-//     var formattedLocation = HTMLschoolLocation.replace("%data%" , education.schools[school].location);
-//     $(".education-entry:last").append(formattedLocation);
-//     var formattedMajor = HTMLschoolMajor.replace("%data%" , education.schools[school].major);
-//     $(".education-entry:last").append(formattedMajor);
-//   }
-// };
 education.display = function() {
   for (var school in education.schools) {
 
     $("#education").append(HTMLschoolStart); // '<div class="education-entry"></div>'
-
     var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-    $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree); // '<a href="#">%data%' + ' -- %data%</a>'
-
     var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-    $(".education-entry:last").append(formattedSchoolDates); // '<div class="date-text">%data%</div>'
-
     var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-    $(".education-entry:last").append(formattedSchoolLocation); // '<div class="location-text">%data%</div>'
-
-    $(".education-entry:last").append('<div style="clear: both;"></div>'); /* jshint ignore:line */
-
     var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+
+    $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree); // '<a href="#">%data%' + ' -- %data%</a>'
+    $(".education-entry:last").append(formattedSchoolDates); // '<div class="date-text">%data%</div>'
+    $(".education-entry:last").append(formattedSchoolLocation); // '<div class="location-text">%data%</div>'
+    $(".education-entry:last").append('<div style="clear: both;"></div>'); /* jshint ignore:line */
     $(".education-entry:last").append(formattedSchoolMajor); // '<em><br>Major: %data%</em>'
   }
-
   $("#education").append(HTMLonlineClasses); // '<h3>Online Classes</h3>'
-
   for (var course in education.onlineCourses) {
     $("#education").append(HTMLschoolStart); // '<div class="education-entry"></div>'
 
     var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-    $(".education-entry:last").append(formattedOnlineTitle); // '<a href="#">%data%'
-
     var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-    $(".education-entry:last").append(formattedOnlineSchool); // ' - %data%</a>'
-
     var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-    $(".education-entry:last").append(formattedOnlineDates); // '<div class="date-text">%data%</div>'
-
     var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+
+    $(".education-entry:last").append(formattedOnlineTitle); // '<a href="#">%data%'
+    $(".education-entry:last").append(formattedOnlineSchool); // ' - %data%</a>'
+    $(".education-entry:last").append(formattedOnlineDates); // '<div class="date-text">%data%</div>'
     $(".education-entry:last").append(formattedURL); // '<br><a href="#">%data%</a>'
   }
 };
