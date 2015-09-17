@@ -90,6 +90,7 @@ a {
 }
 
 .welcome-message {
+  padding: 0;
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
@@ -166,7 +167,6 @@ span {
 }
 
 /* Media queries to handle various device widths */
-
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
@@ -176,6 +176,13 @@ span {
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
+  }
+  #skills-h3 {
+    margin: 0.5rem 0 0.125rem;
+    padding: 0.75rem 0 0;
+  }
+  .column {
+    padding: 0 10px 10px;
   }
 }
 
@@ -207,5 +214,15 @@ span {
   #skills-h3,
   .biopic {
     display: block;
+  }
+  #skills-h3 {
+    margin: 0.5rem 0 0.125rem;
+    padding: 0;
+  }
+  #skills {
+    padding: 3px 10px;
+  }
+  .column {
+    flex-direction: column;
   }
 }
