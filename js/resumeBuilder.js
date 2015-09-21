@@ -3,7 +3,7 @@ var bio = {
   'role': 'Web Developer',
   'contacts': {
     'mobile': '555-555-55554',
-    'email': 'example@example.com',
+    'email': 'aliasorid@gmail.com',
     'twitter': '@testyunicorn',
     'github': 'https://github.com/8legged/',
     'blog': 'http://8legged.github.io/',
