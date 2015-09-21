@@ -9,7 +9,7 @@ var bio = {
     'blog': 'http://8legged.github.io/',
     'location': 'Seattle'
   },
-  'bioPic': '../images/fry.jpg',
+  'bioPic': 'images/fry.jpg',
   'welcomeMsg': "Hi! I'm a developer based in Seattle, WA. I'm trying to do my part to make the web as fast as possible, highly readable, responsive, and easy to navigate.", /* jshint ignore:line */
   'skills': [
     'Reading', 'Riting', 'Rithmatic'
@@ -31,13 +31,12 @@ var projects = {
     'title': '1st project placeholder',
     'dates': 'date placeholder',
     'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam sequi, ipsum quidem quibusdam! Iusto sint praesentium voluptas. Incidunt atque reprehenderit molestiae tenetur suscipit numquam odit, repellendus saepe perspiciatis, repudiandae consectetur!',
-    'images': [ '../images/197x148.gif', '../images/197x148.gif' ]
+    'images': [ 'images/197x148.gif', 'images/197x148.gif' ]
   }, {
     'title': '2nd project placeholder',
     'dates': 'date placeholder',
     'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quam nulla blanditiis illo maxime quae aliquid, voluptatibus sint odio in vel quod, molestias voluptatem quo! Minus debitis praesentium vitae doloremque?',
-    // 'images': [ '../images/197x148.gif', '../images/197x148.gif' ]
-    'images': [ 'images/fry.jpg', '../images/197x148.gif' ]
+    'images': [ 'images/197x148.gif', 'images/197x148.gif' ]
   } ]
 };
 
