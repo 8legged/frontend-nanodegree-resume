@@ -209,3 +209,18 @@ $('#mapDiv').append( googleMap );
 // respective display, work, and education objects.
 
 // Add something cool, like maps or charts, or personalizing the CSS
+
+
+function getRelationship(x, y) {
+  if (x === isNaN || y === isNaN) {
+      return 'not a number';
+  } else if (x > y) {
+      return x > y;
+  }  else if (x < y) {
+      return x < y;
+  } else if (x === y) {
+      return x === y;
+  } else {
+      return 'hi';
+  }
+}

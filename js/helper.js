@@ -167,12 +167,16 @@ function initializeMap() {
     // or hover over a pin on a map. They usually contain more information
     // about a location.
     var infoWindow = new google.maps.InfoWindow({
-      content: name
+      content: '<h4>' + name + '</h4>' + '<a href="http://www.visitseattle.org/">Discover Seattle</a></p>'
     });
 
-    // hmmmm, I wonder what this is about...
+    // show info window when the marker is clicked
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.open(map, marker);
+    });
+    // close info window when the map is clicked
+    google.maps.event.addListener(map, 'click', function() {
+      infoWindow.close();
     });
 
     // this is where the pin actually gets added to the map.
@@ -180,6 +184,8 @@ function initializeMap() {
     bounds.extend(new google.maps.LatLng(lat, lon));
     // fit the map to the new marker
     map.fitBounds(bounds);
+    // set the initial zoom level
+    map.setZoom(3);
     // center the map
     map.setCenter(bounds.getCenter());
   }
