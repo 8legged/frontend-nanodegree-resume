@@ -36,7 +36,8 @@ var projects = {
     'title': '2nd project placeholder',
     'dates': 'date placeholder',
     'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quam nulla blanditiis illo maxime quae aliquid, voluptatibus sint odio in vel quod, molestias voluptatem quo! Minus debitis praesentium vitae doloremque?',
-    'images': [ '../images/197x148.gif', '../images/197x148.gif' ]
+    // 'images': [ '../images/197x148.gif', '../images/197x148.gif' ]
+    'images': [ 'images/fry.jpg', '../images/197x148.gif' ]
   } ]
 };
 
@@ -211,16 +212,3 @@ $('#mapDiv').append( googleMap );
 // Add something cool, like maps or charts, or personalizing the CSS
 
 
-function getRelationship(x, y) {
-  if (x === isNaN || y === isNaN) {
-      return 'not a number';
-  } else if (x > y) {
-      return x > y;
-  }  else if (x < y) {
-      return x < y;
-  } else if (x === y) {
-      return x === y;
-  } else {
-      return 'hi';
-  }
-}
